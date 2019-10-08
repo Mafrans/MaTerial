@@ -51,7 +51,8 @@ ma_.addEffect(
     "slide", // ripple, slide
     ".mySelector", { // Supports all jQuery selectors 
         color: [128, 255, 63], // [r, g, b]
-        type: "right" // right, left, up down 
+        type: "right", // right, left, up down 
+        opacity: 0.3
     });
 ```
 
