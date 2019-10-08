@@ -18,13 +18,32 @@ MaTerial introduces three new types of buttons, they can be implemented using th
 MaTerial also introduces two unique click effects that can be used on any element that supports children (image tags and other tags that do not support children will have to be wrapped in a container with the effect to properly work).
 
 The simplest way to add an effect is to use it's respective class, along with the base class `.ma_effect`.  
-Effect | Class  
---- | ---  
-Ripple | `.ma_ripple`
-Slide Right | `.ma_slide-right`
-Slide Left | `.ma_slide-left`
-Slide Up | `.ma_slide-up`
-Slide Down | `.ma_slide-down`
+<table>
+    <tr>
+        <th>Effect</th>
+        <th>Class</th>
+    </tr>
+    <tr>
+        <td>Ripple</td>
+        <td><code>.ma_ripple</code></td>
+    </tr>
+    <tr>
+        <td>Slide Right</td>
+        <td><code>.ma_slide-right</code></td>
+    </tr>
+    <tr>
+        <td>Slide Left</td>
+        <td><code>.ma_slide-left</code></td>
+    </tr>
+    <tr>
+        <td>Slide Up</td>
+        <td><code>.ma_slide-up</code></td>
+    </tr>
+    <tr>
+        <td>Slide Down</td>
+        <td><code>.ma_slide-down</code></td>
+    </tr>
+</table> 
 
 If you want to color your effect, you cannot use classes, but instead have to use javascript to add your effects. Remember to run your effects in the window load event, so that images and other media will load before MaTerial attempts to create the effect canvas. Using this method still requires the base `.ma_effect` class to be applied.
 ```javascript
