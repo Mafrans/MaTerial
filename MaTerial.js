@@ -50,6 +50,18 @@ prepareEffect = function (obj, options, then) {
     });
 }
 
+
+function resizeCanvases() {
+    $("canvas.ma_ecnv").each((i, e)=>{
+        
+        var canvas = $(e);
+        var parent = canvas.parent();
+
+        canvas.attr("width", Math.round(parent.outerWidth()))
+        .attr("height", Math.round(parent.outerHeight()))
+    });
+}
+
 ma_.addRippleEffect = function (obj, options) {
     prepareEffect(obj, options, (object, canvas, options, clickstyle) => {
         var bRadius = object.css("MozBorderRadius");
@@ -302,8 +314,11 @@ function parseRgb(hex) {
 
 
 $(() => {
-    $(".btn.btn-border").each((i, e) => {
-        var obj = $(e);
+    $(window).on("resize", ()=>{
+        clearTimeout(window.resizedFinished);
+        window.resizedFinished = setTimeout(function(){
+            resizeCanvases();
+        }, 250);
     })
 })
 
@@ -351,7 +366,7 @@ window.addEventListener("load", () => {
                     /* 
                     *  Add/remove instead of setting the color, as too much of a
                     *  color contrast would make the color less pleasing to the eye
-                    */ 
+                    */
                     if (style == "light") {
                         color[0] = Math.min(color[0] + 100, 255);
                         color[1] = Math.min(color[1] + 100, 255);
@@ -368,16 +383,16 @@ window.addEventListener("load", () => {
                         ma_.addEffect(
                             typeName,
                             ".btn.btn-" + colorName + ".ma_effect.ma_" + typeName, {
-                                color: color,
-                            });
+                            color: color,
+                        });
                         continue;
                     }
 
                     ma_.addEffect(
                         typeName,
                         ".btn.btn-" + styleName + ".btn-" + colorName + ".ma_effect.ma_" + typeName, {
-                            color: color
-                        });
+                        color: color
+                    });
                 }
             }
         }
@@ -406,9 +421,9 @@ window.addEventListener("load", () => {
                         ma_.addEffect(
                             typeName,
                             ".btn.btn-" + colorName + ".ma_effect.ma_" + typeName + "-" + type, {
-                                color: color,
-                                type: type
-                            });
+                            color: color,
+                            type: type
+                        });
                         continue;
                     }
 
@@ -416,9 +431,9 @@ window.addEventListener("load", () => {
                     ma_.addEffect(
                         typeName,
                         ".btn.btn-" + styleName + ".btn-" + colorName + ".ma_effect.ma_" + typeName + "-" + type, {
-                            color: color,
-                            type: type
-                        });
+                        color: color,
+                        type: type
+                    });
                 }
             }
         }

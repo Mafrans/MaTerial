@@ -40,59 +40,67 @@
     pointer-events: none;
 }
 
+.btn-primary:not(:disabled):not(.disabled):not(.btn-border), 
 .btn-primary:not(:disabled):not(.disabled).active, 
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary.ma_effect:hover {
-    color: #fff;
+    color: #efefef;
     background-color: var(--primary);
 }
 
+.btn-secondary:not(:disabled):not(.disabled):not(.btn-border), 
 .btn-secondary:not(:disabled):not(.disabled).active, 
 .btn-secondary:not(:disabled):not(.disabled):active,
 .btn-secondary.ma_effect:hover {
-    color: #fff;
+    color: #efefef;
     background-color: var(--secondary);
 }
 
+.btn-success:not(:disabled):not(.disabled):not(.btn-border), 
 .btn-success:not(:disabled):not(.disabled).active, 
 .btn-success:not(:disabled):not(.disabled):active,
 .btn-success.ma_effect:hover {
-    color: #fff;
+    color: #efefef;
     background-color: var(--success);
 }
 
+.btn-danger:not(:disabled):not(.disabled):not(.btn-border), 
 .btn-danger:not(:disabled):not(.disabled).active, 
 .btn-danger:not(:disabled):not(.disabled):active,
 .btn-danger.ma_effect:hover {
-    color: #fff;
+    color: #efefef;
     background-color: var(--danger);
 }
 
+.btn-warning:not(:disabled):not(.disabled):not(.btn-border), 
 .btn-warning:not(:disabled):not(.disabled).active, 
 .btn-warning:not(:disabled):not(.disabled):active,
 .btn-warning.ma_effect:hover {
-    color: #fff;
+    color: #efefef;
     background-color: var(--warning);
 }
 
+.btn-info:not(:disabled):not(.disabled):not(.btn-border), 
 .btn-info:not(:disabled):not(.disabled).active, 
 .btn-info:not(:disabled):not(.disabled):active,
 .btn-info.ma_effect:hover {
-    color: #fff;
+    color: #efefef;
     background-color: var(--info);
 }
 
+.btn-light:not(:disabled):not(.disabled):not(.btn-border), 
 .btn-light:not(:disabled):not(.disabled).active, 
 .btn-light:not(:disabled):not(.disabled):active,
 .btn-light.ma_effect:hover {
-    color: #fff;
+    color: #212529;
     background-color: var(--light);
 }
 
+.btn-dark:not(:disabled):not(.disabled):not(.btn-border), 
 .btn-dark:not(:disabled):not(.disabled).active, 
 .btn-dark:not(:disabled):not(.disabled):active,
 .btn-dark.ma_effect:hover {
-    color: #fff;
+    color: #efefef;
     background-color: var(--dark);
 }
 
@@ -187,7 +195,7 @@
 }
 .btn.btn-border:not(:disabled):not(.disabled).btn-warning {
     border: 2px solid var(--warning);
-    color: #000;
+    color: var(--warning);
 }
 .btn.btn-border:not(:disabled):not(.disabled).btn-info {
     border: 2px solid var(--info);
