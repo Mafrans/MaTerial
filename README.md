@@ -6,8 +6,8 @@ A demo of the theme can be found at https://mafrans.github.io/MaTerial
 MaTerial requires [jQuery](https://jquery.com) and [Bootstrap](https://getbootstrap.com) and should be placed far down in the script list. If any effects stop working, this can be due to MaTerial's window load listener being overridden by another javascript file, and MaTerial needs to be placed forther down in the script list.
 
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/Mafrans/MaTerial/master/MaTerial.css"></script>
-<script rel="stylesheet" href="https://raw.githubusercontent.com/Mafrans/MaTerial/master/MaTerial.js"></script>
+<link rel="stylesheet" href="MaTerial.css"></script>
+<script src="MaTerial.js"></script>
 ```
 
 # How to use
